@@ -1,0 +1,1022 @@
+@layer base {
+  :root {
+    /* IMPORTANT: Do not override `--font-open-sans`! */
+    /* --font-open-sans: "OpenSans", sans-serif; */
+    --font-icomoonmds: "icomoonmds";
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+  }
+
+  [class^="icon-"]:before,
+  [class*="icon-"]:before {
+    display: inline-block;
+    text-transform: none;
+    font-weight: var(--font-weight-normal);
+    font-style: normal;
+    font-variant: normal;
+    font-family: var(--font-icomoonmds);
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.checked [class^="icon-"]:before,
+.checked [class*="icon-"]:before {
+  display: inline-block;
+  background-color: #126bc5;
+  border: 0.0625rem solid #126bc5;
+  text-transform: none;
+  font-weight: var(--font-weight-normal);
+  font-style: normal;
+  font-variant: normal;
+  font-family: var(--font-icomoonmds);
+  speak: none;
+  color: #fff;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  margin-right: 0.625rem;
+  min-height: 1.5625rem;
+  min-width: 1.5625rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-empty:before {
+  content: "";
+}
+
+.icon-add-a-card:before {
+  content: "\e940";
+}
+
+.icon-annual-points-10:before {
+  content: "\e941";
+}
+
+.icon-arrow-full:before {
+  content: "\e975";
+}
+
+.icon-arrow-right:before {
+  content: "\e900";
+}
+
+.icon-arrow-right-rounded:before {
+  content: "\e944";
+}
+
+.icon-arrow-up:before {
+  content: "\e901";
+}
+
+.icon-arrow-up-rounded:before {
+  content: "\e945";
+}
+
+.icon-arrow-left:before {
+  content: "\e902";
+}
+
+.icon-arrow-left-rounded:before {
+  content: "\e943";
+}
+
+.icon-arrow-down:before {
+  content: "\e903";
+}
+
+.icon-arrow-down-rounded:before {
+  content: "\e942";
+}
+
+.icon-arrow-round:before {
+  content: "\e962";
+}
+
+.icon-account-protection:before {
+  content: "\e919";
+}
+
+.icon-additional-benefits:before {
+  content: "\e918";
+}
+
+.icon-annual-fee:before {
+  content: "\e921";
+}
+
+.icon-balance-transfer:before {
+  content: "\e927";
+}
+
+.icon-bonus:before {
+  content: "\e923";
+}
+
+.icon-card-finder:before {
+  content: "\e90c";
+}
+
+.icon-card:before {
+  content: "\e924";
+}
+
+.icon-cards:before {
+  content: "\e924";
+}
+
+.icon-caret:before {
+  content: "\e946";
+}
+
+.icon-cash-back:before {
+  content: "\e929";
+}
+
+.icon-cash-back-alt:before {
+  content: "\e93f";
+}
+
+.icon-cash-back-alt2:before {
+  content: "\e965";
+}
+
+.icon-cash:before {
+  content: "\e929";
+}
+
+.icon-chase-logo:before {
+  content: "\e92e";
+}
+
+.icon-chase-text-logo:before {
+  content: "\e930";
+}
+
+.icon-chase-text:before {
+  content: "\e92f";
+}
+
+.icon-checkmark:before {
+  content: "\e90d";
+}
+
+.icon-check-medal:before {
+  content: "\e936";
+}
+
+.icon-contactless:before {
+  content: "\e98c";
+}
+
+.icon-credit-dashboard:before {
+  content: "\e916";
+}
+
+.icon-credit-limit-increase:before {
+  content: "\e999";
+  font-weight: bold;
+}
+
+.icon-credit-limit-increase-alt:before {
+  content: "\e9a5";
+}
+
+.icon-compare-cards:before {
+  content: "\e924";
+}
+
+.icon-customer-service:before {
+  content: "\e915";
+}
+
+.icon-device:before {
+  content: "\e908";
+}
+
+.icon-disney-ears:before {
+  content: "\e967";
+}
+
+.icon-disney-coins:before {
+  content: "\e968";
+}
+
+.icon-disney-castle:before {
+  content: "\e996";
+}
+
+.icon-disney-streaming:before {
+  content: "\e9ac";
+}
+
+.icon-doordash:before {
+  content: "\e9b1";
+}
+
+.icon-doordash-logo:before {
+  content: "\e9b2";
+}
+
+.icon-drink:before {
+  content: "\e966";
+}
+
+.icon-drive-to-end-hunger:before {
+  content: "\e947";
+}
+
+.icon-earn-point:before {
+  content: "\e920";
+}
+
+.icon-edit:before {
+  content: "\e96d";
+}
+
+.icon-entertainment:before {
+  content: "\e96e";
+}
+
+.icon-events:before {
+  content: "\e912";
+}
+
+.icon-everydaypurchases:before {
+  content: "\e96f";
+}
+
+.icon-exclusive-benefits:before {
+  content: "\e9aa";
+}
+
+.icon-featured-card:before {
+  content: "\e91c";
+}
+
+.icon-featured-checkmark:before {
+  content: "\e96a";
+}
+
+.icon-financial-tools:before {
+  content: "\e9a3";
+}
+
+.icon-free-credit-score:before {
+  content: "\e998";
+}
+
+.icon-fico-score:before {
+  content: "\e913";
+}
+
+.icon-fico-720:before {
+  content: "\e963";
+}
+
+.icon-filter:before {
+  content: "\e90e";
+}
+
+.icon-flexible-rewards:before {
+  content: "\e970";
+}
+
+.icon-foreign-transaction-fee:before {
+  content: "\e917";
+}
+
+.icon-foreign-transaction-fee-alt:before {
+  content: "\e99c";
+}
+
+.icon-good-standing-rewards-20:before {
+  content: "\e997";
+}
+
+.icon-hotel:before {
+  content: "\e91d";
+}
+
+.icon-hotel-alt:before {
+  content: "\e969";
+}
+
+.icon-hotel-alt2:before {
+  content: "\e99f";
+}
+
+.icon-hotels:before {
+  content: "\e971";
+}
+
+.icon-intro-apr:before {
+  content: "\e922";
+}
+
+.icon-insurance-protection:before {
+  content: "\e939";
+}
+
+.icon-lock:before {
+  content: "\e909";
+}
+
+.icon-low-interest-rate:before {
+  content: "\e93e";
+}
+
+.icon-low-interest-rate-2:before {
+  content: "\e9a4";
+}
+
+.icon-lyft-car:before {
+  content: "\e9b6";
+}
+
+.icon-mastercard:before {
+  content: "\e935";
+}
+
+.icon-mp:before {
+  content: "\e99e";
+}
+
+.icon-more:before {
+  content: "\e932";
+}
+
+.icon-no-blackout-dates:before {
+  content: "\e99b";
+}
+
+.icon-no-penalty-apr:before {
+  content: "\e91f";
+}
+
+.icon-office-supplies:before {
+  content: "\e91e";
+}
+
+.icon-open-window:before {
+  content: "\e948";
+}
+
+.icon-partner-benefit:before {
+  content: "\e994";
+  font-weight: bold;
+}
+
+.icon-partner-benefits:before {
+  content: "\e995";
+}
+
+.icon-pay-over-time:before {
+  content: "\e921";
+}
+
+.icon-pencil:before {
+  content: "\e910";
+}
+
+.icon-percent:before {
+  content: "\e98b";
+}
+
+.icon-personal:before {
+  content: "\e972";
+}
+
+.icon-plus-sq:before {
+  content: "+";
+}
+
+.icon-print:before {
+  content: "\e949";
+}
+
+.icon-point-transfer:before {
+  content: "\e914";
+}
+
+.icon-point-transfer-alt:before {
+  content: "\e9a8";
+}
+
+.icon-pqp:before {
+  content: "\e9b5";
+}
+
+.icon-protection:before {
+  content: "\e990";
+}
+
+.icon-purchase-benefits:before {
+  content: "\e91a";
+}
+
+.icon-quote:before {
+  content: "\e90f";
+}
+
+.icon-raf:before {
+  content: "\e991";
+}
+
+.icon-redeeming-points:before {
+  content: "\e9bb";
+}
+
+.icon-refer:before {
+  content: "\e90b";
+}
+
+.icon-rewards-1x:before {
+  content: "\e94a";
+}
+
+.icon-rewards-2x:before {
+  content: "\e905";
+}
+
+.icon-rewards-5x:before {
+  content: "\e906";
+}
+
+.icon-rewards:before {
+  content: "\e926";
+}
+
+.icon-ritz-10:before {
+  content: "\e93d";
+}
+
+.icon-savings:before {
+  content: "\e973";
+}
+
+.icon-security:before {
+  content: "\e911";
+}
+
+.icon-shopping-bag:before {
+  content: "\e964";
+}
+
+.icon-shopping-bag-alt:before {
+  content: "\e99d";
+}
+
+.icon-slate-edge:before {
+  content: "\e9b3";
+}
+
+.icon-business:before {
+  content: "\e925";
+}
+
+.icon-star:before {
+  content: "\e9a6";
+}
+
+.icon-star-wars:before {
+  content: "\e93c";
+}
+
+.icon-starbucks-250:before {
+  content: "\e979";
+}
+
+.icon-starbucks-300:before {
+  content: "\e98d";
+}
+
+.icon-starbucks-apron:before {
+  content: "\e976";
+}
+
+.icon-starbucks-cup:before {
+  content: "\e99a";
+}
+
+.icon-starbucks-gold-card:before {
+  content: "\e977";
+}
+
+.icon-starbucks-star:before {
+  content: "\e978";
+}
+
+.icon-student-credit-cards:before {
+  content: "\e98A";
+}
+
+.icon-travel-benefits:before {
+  content: "\e91b";
+}
+
+.icon-travel-benefits-alt:before {
+  content: "\e93a";
+}
+
+.icon-travel:before {
+  content: "\e928";
+}
+
+.icon-travel-stars:before {
+  content: "\e9a9";
+}
+
+.icon-travel-exclusive:before {
+  content: "\e9a7";
+}
+
+.icon-traveldining:before {
+  content: "\e974";
+}
+
+.icon-tsa-checkmark:before {
+  content: "\e98f";
+}
+
+.icon-visa:before {
+  content: "\e934";
+}
+
+.icon-wifi:before {
+  content: "\e98e";
+}
+
+.icon-wholesale:before {
+  content: "\e94c";
+}
+
+.icon-twitter-old:before {
+  content: "\e904";
+}
+
+.icon-twitter:before {
+  content: "\e9b7";
+}
+
+.icon-instagram:before {
+  content: "\e92b";
+}
+
+.icon-pinterest:before {
+  content: "\e907";
+}
+
+.icon-youtube:before {
+  content: "\e90a";
+}
+
+.icon-linkedin:before {
+  content: "\e92c";
+}
+
+.icon-facebook:before {
+  content: "\e92d";
+}
+
+.icon-close:before {
+  content: "\e931";
+}
+
+.icon-pay-yourself:before {
+  content: "\e64a";
+}
+
+.icon-circle-check:before {
+  content: "\e961";
+}
+
+.icon-numbers-0:before {
+  content: "0";
+}
+
+.icon-numbers-1:before {
+  content: "1";
+}
+
+.icon-numbers-1-5:before {
+  content: "1.5";
+}
+
+.icon-numbers-2:before {
+  content: "2";
+}
+
+.icon-numbers-2-5:before {
+  content: "2.5";
+}
+
+.icon-numbers-3:before {
+  content: "3";
+}
+
+.icon-numbers-3-5:before {
+  content: "3.5";
+}
+
+.icon-numbers-4:before {
+  content: "4";
+}
+
+.icon-numbers-4-5:before {
+  content: "4.5";
+}
+
+.icon-numbers-5:before {
+  content: "5";
+}
+
+.icon-numbers-5-5:before {
+  content: "5.5";
+}
+
+.icon-numbers-6:before {
+  content: "6";
+}
+
+.icon-numbers-6-5:before {
+  content: "6.5";
+}
+
+.icon-numbers-7:before {
+  content: "7";
+}
+
+.icon-numbers-7-5:before {
+  content: "7.5";
+}
+
+.icon-numbers-8:before {
+  content: "8";
+}
+
+.icon-numbers-8-5:before {
+  content: "8.5";
+}
+
+.icon-numbers-9:before {
+  content: "9";
+}
+
+.icon-numbers-9-5:before {
+  content: "9.5";
+}
+
+.icon-numbers-10:before {
+  content: "10";
+}
+
+.icon-numbers-14:before {
+  content: "14";
+}
+
+.icon-numbers-15:before {
+  content: "15";
+}
+
+.icon-numbers-17:before {
+  content: "17";
+}
+
+.icon-numbers-18-5:before {
+  content: "18.5";
+  font-size: 26px !important;
+}
+
+.icon-numbers-25:before {
+  content: "25";
+}
+
+.icon-numbers-26:before {
+  content: "26";
+}
+
+.icon-numbers-40:before {
+  content: "40";
+}
+
+.icon-numbers-500:before {
+  content: "500";
+}
+
+.icon-numbers-0:before,
+.icon-numbers-1:before,
+.icon-numbers-1-5:before,
+.icon-numbers-2:before,
+.icon-numbers-2-5:before,
+.icon-numbers-3:before,
+.icon-numbers-3-5:before,
+.icon-numbers-4:before,
+.icon-numbers-4-5:before,
+.icon-numbers-5:before,
+.icon-numbers-5-5:before,
+.icon-numbers-6:before,
+.icon-numbers-6-5:before,
+.icon-numbers-7:before,
+.icon-numbers-7-5:before,
+.icon-numbers-8:before,
+.icon-numbers-8-5:before,
+.icon-numbers-9:before,
+.icon-numbers-9-5:before,
+.icon-numbers-10:before,
+.icon-numbers-14:before,
+.icon-numbers-15:before,
+.icon-numbers-17:before,
+.icon-numbers-18-5:before,
+.icon-numbers-25:before,
+.icon-numbers-26:before,
+.icon-numbers-40:before,
+.icon-plus-sq:before {
+  font-family: "OpenSans", sans-serif !important;
+  font-weight: var(--font-weight-bold);
+}
+
+.icon-money-0:before {
+  content: "\e9ab";
+}
+
+.icon-money-125:before {
+  content: "$125";
+}
+
+.icon-money-300:before {
+  content: "$300";
+}
+
+.icon-money-100:before,
+.icon-money-125:before,
+.icon-money-300:before {
+  font-family: "OpenSans", sans-serif !important;
+  font-weight: var(--font-weight-bold);
+  font-size: 24px !important;
+}
+
+.icon-percent-0:before {
+  content: "0%";
+}
+
+.icon-percent-1:before {
+  content: "1%";
+}
+
+.icon-percent-1-5:before {
+  content: "1.5%";
+}
+
+.icon-percent-2:before {
+  content: "2%";
+}
+
+.icon-percent-2-5:before {
+  content: "2.5%";
+}
+
+.icon-percent-3:before {
+  content: "3%";
+}
+
+.icon-percent-3-5:before {
+  content: "3.5%";
+}
+
+.icon-percent-4:before {
+  content: "4%";
+}
+
+.icon-percent-4-5:before {
+  content: "4.5%";
+}
+
+.icon-percent-5:before {
+  content: "5%";
+}
+
+.icon-percent-25:before {
+  content: "25%";
+}
+
+.icon-percent-50:before {
+  content: "50%";
+}
+
+.icon-percent-0:before,
+.icon-percent-1:before,
+.icon-percent-2:before,
+.icon-percent-3:before,
+.icon-percent-4:before,
+.icon-percent-5:before {
+  font-family: "OpenSans", sans-serif !important;
+  font-size: 32px !important;
+  font-weight: var(--font-weight-bold);
+}
+
+.icon-percent-1-5:before,
+.icon-percent-2-5:before,
+.icon-percent-3-5:before,
+.icon-percent-4-5:before,
+.icon-percent-25:before,
+.icon-percent-50:before,
+.icon-numbers-500:before {
+  font-family: "OpenSans", sans-serif !important;
+  font-size: 26px !important;
+  font-weight: var(--font-weight-bold);
+}
+
+@media (max-width: 768px) {
+  .icon-percent-0:before,
+  .icon-percent-1:before,
+  .icon-percent-2:before,
+  .icon-percent-3:before,
+  .icon-percent-4:before,
+  .icon-percent-5:before {
+    font-size: 20px !important;
+  }
+
+  .icon-percent-1-5:before,
+  .icon-percent-2-5:before,
+  .icon-percent-3-5:before,
+  .icon-percent-4-5:before,
+  .icon-percent-25:before,
+  .icon-percent-50:before,
+  .icon-numbers-500:before {
+    font-size: 16px !important;
+  }
+}
+
+.icon-0x:before {
+  content: "0X";
+}
+
+.icon-1x:before {
+  content: "1X";
+}
+
+.icon-1-5x:before {
+  content: "1.5X";
+}
+
+.icon-2x:before {
+  content: "2X";
+}
+
+.icon-2-5x:before {
+  content: "2.5X";
+}
+
+.icon-3x:before {
+  content: "3X";
+}
+
+.icon-new:before {
+  content: "NEW!";
+  font-size: 22px !important;
+  font-family: "OpenSans", sans-serif !important;
+  font-weight: var(--font-weight-bold);
+}
+
+@media (max-width: 768px) {
+  .icon-new:before {
+    font-size: 16px !important;
+  }
+}
+
+.icon-3-5x:before {
+  content: "3.5X";
+}
+
+.icon-4x:before {
+  content: "4X";
+}
+
+.icon-4-5x:before {
+  content: "4.5X";
+}
+
+.icon-5x:before {
+  content: "5X";
+}
+
+.icon-0x:before,
+.icon-1x:before,
+.icon-2x:before,
+.icon-3x:before,
+.icon-4x:before,
+.icon-5x:before {
+  font-family: "OpenSans", sans-serif !important;
+  font-size: 34px !important;
+  font-weight: var(--font-weight-bold);
+}
+
+.icon-1-5x:before,
+.icon-2-5x:before,
+.icon-3-5x:before,
+.icon-4-5x:before {
+  font-family: "OpenSans", sans-serif !important;
+  font-size: 26px !important;
+  font-weight: var(--font-weight-bold);
+}
+
+.icon-money-coins:before {
+  content: "\e9ba";
+}
+
+.icon-currency-usd:before {
+  content: "\e9bd";
+}
+
+.icon-currency-usd-circle:before {
+  content: "\e9be";
+}
+
+.icon-payback:before {
+  content: "\e9bf";
+}
+
+.icon-cards:before {
+  content: "\e9c0";
+}
+
+.icon-star:before {
+  content: "\e9c1";
+}
+
+.icon-raf:before {
+  content: "\e9c2";
+}
+
+.icon-credit-increase:before {
+  content: "\e9bc";
+}
+
+.icon-united-club-new:before {
+  content: "\e9c3";
+}
+
+.icon-shield:before {
+  content: "\e9c4";
+}
+
+.icon-annual-partner-credits:before {
+  content: "\e9c5";
+}
+
+.icon-anniversary:before {
+  content: "\e9c6";
+  font-size: 48px !important;
+}
+
+.icon-tilt-card:before {
+  content: "\e9c7";
+}
+
+.icon-global-entry:before {
+  content: "\e9c8";
+}
+
+.icon-apr:before {
+  content: "\e9c9";
+}
+
+.icon-pay-calendar:before {
+  content: "\e9ca";
+}
+
+.icon-bidirectional-arrows:before {
+  content: "\e9cb";
+}
+
+.icon-chair:before {
+  content: "\e9cc";
+}
+
+.icon-tickets:before {
+  content: "\e9cd";
+}
+.icon-card-features:before {
+  content: "\e97c";
+}
+
+.icon-slant-roof-building:before {
+  content: "\e9ce";
+}
+
+.icon-calendar-timer:before {
+  content: "\e9cf";
+}
+
+.icon-crisscross-arrows:before {
+  content: "\e9d0";
+}
+
+.icon-wallet:before {
+  content: "\e9d1";
+}
+
+.icon-dine:before {
+  content: "\e9d2";
+}
