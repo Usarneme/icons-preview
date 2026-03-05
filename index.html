@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icons preview – icomoonmds</title>
+    <link rel="stylesheet" href="src/styles/fonts/fonts-icomoonmds.css" />
+    <link rel="stylesheet" href="src/styles/icons.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        margin: 0;
+        padding: 1.5rem;
+        background: #f5f5f5;
+      }
+      h1 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.5rem;
+      }
+      .note {
+        color: #666;
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem;
+      }
+      .search-wrap {
+        margin-bottom: 1rem;
+      }
+      .search-wrap input {
+        padding: 0.5rem 0.75rem;
+        width: 100%;
+        max-width: 20rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.75rem;
+      }
+      .icon-cell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1rem 0.5rem;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        min-height: 5rem;
+      }
+      .icon-cell .glyph {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+        min-height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .icon-cell .name {
+        font-size: 0.7rem;
+        color: #333;
+        text-align: center;
+        word-break: break-all;
+        line-height: 1.2;
+      }
+      .icon-cell.hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Icons preview (icomoonmds)</h1>
+    <div class="search-wrap">
+      <input
+        type="text"
+        id="search"
+        placeholder="Filter by class name…"
+        autocomplete="off"
+      />
+    </div>
+    <div class="grid" id="grid"></div>
+
+    <script>
+      const ICONS = [
+        "icon-0x",
+        "icon-1-5x",
+        "icon-1x",
+        "icon-2-5x",
+        "icon-2x",
+        "icon-3-5x",
+        "icon-3x",
+        "icon-4-5x",
+        "icon-4x",
+        "icon-5x",
+        "icon-account-protection",
+        "icon-add-a-card",
+        "icon-additional-benefits",
+        "icon-anniversary",
+        "icon-annual-fee",
+        "icon-annual-partner-credits",
+        "icon-annual-points-10",
+        "icon-apr",
+        "icon-arrow-down",
+        "icon-arrow-down-rounded",
+        "icon-arrow-full",
+        "icon-arrow-left",
+        "icon-arrow-left-rounded",
+        "icon-arrow-right",
+        "icon-arrow-right-rounded",
+        "icon-arrow-round",
+        "icon-arrow-up",
+        "icon-arrow-up-rounded",
+        "icon-balance-transfer",
+        "icon-bidirectional-arrows",
+        "icon-bonus",
+        "icon-business",
+        "icon-calendar-timer",
+        "icon-card",
+        "icon-card-features",
+        "icon-card-finder",
+        "icon-cards",
+        "icon-caret",
+        "icon-cash",
+        "icon-cash-back",
+        "icon-cash-back-alt",
+        "icon-cash-back-alt2",
+        "icon-chair",
+        "icon-chase-logo",
+        "icon-chase-text",
+        "icon-chase-text-logo",
+        "icon-check-medal",
+        "icon-checkmark",
+        "icon-circle-check",
+        "icon-close",
+        "icon-compare-cards",
+        "icon-contactless",
+        "icon-credit-dashboard",
+        "icon-credit-increase",
+        "icon-credit-limit-increase",
+        "icon-credit-limit-increase-alt",
+        "icon-crisscross-arrows",
+        "icon-currency-usd",
+        "icon-currency-usd-circle",
+        "icon-customer-service",
+        "icon-device",
+        "icon-dine",
+        "icon-disney-castle",
+        "icon-disney-coins",
+        "icon-disney-ears",
+        "icon-disney-streaming",
+        "icon-doordash",
+        "icon-doordash-logo",
+        "icon-drink",
+        "icon-drive-to-end-hunger",
+        "icon-earn-point",
+        "icon-edit",
+        "icon-empty",
+        "icon-entertainment",
+        "icon-events",
+        "icon-everydaypurchases",
+        "icon-exclusive-benefits",
+        "icon-facebook",
+        "icon-featured-card",
+        "icon-featured-checkmark",
+        "icon-fico-720",
+        "icon-fico-score",
+        "icon-filter",
+        "icon-financial-tools",
+        "icon-flexible-rewards",
+        "icon-foreign-transaction-fee",
+        "icon-foreign-transaction-fee-alt",
+        "icon-free-credit-score",
+        "icon-global-entry",
+        "icon-good-standing-rewards-20",
+        "icon-hotel",
+        "icon-hotel-alt",
+        "icon-hotel-alt2",
+        "icon-hotels",
+        "icon-instagram",
+        "icon-insurance-protection",
+        "icon-intro-apr",
+        "icon-linkedin",
+        "icon-lock",
+        "icon-low-interest-rate",
+        "icon-low-interest-rate-2",
+        "icon-lyft-car",
+        "icon-mastercard",
+        "icon-money-0",
+        "icon-money-100",
+        "icon-money-125",
+        "icon-money-300",
+        "icon-money-coins",
+        "icon-more",
+        "icon-mp",
+        "icon-new",
+        "icon-no-blackout-dates",
+        "icon-no-penalty-apr",
+        "icon-numbers-0",
+        "icon-numbers-1",
+        "icon-numbers-1-5",
+        "icon-numbers-10",
+        "icon-numbers-14",
+        "icon-numbers-15",
+        "icon-numbers-17",
+        "icon-numbers-18-5",
+        "icon-numbers-2",
+        "icon-numbers-2-5",
+        "icon-numbers-25",
+        "icon-numbers-26",
+        "icon-numbers-3",
+        "icon-numbers-3-5",
+        "icon-numbers-4",
+        "icon-numbers-4-5",
+        "icon-numbers-40",
+        "icon-numbers-5",
+        "icon-numbers-5-5",
+        "icon-numbers-500",
+        "icon-numbers-6",
+        "icon-numbers-6-5",
+        "icon-numbers-7",
+        "icon-numbers-7-5",
+        "icon-numbers-8",
+        "icon-numbers-8-5",
+        "icon-numbers-9",
+        "icon-numbers-9-5",
+        "icon-office-supplies",
+        "icon-open-window",
+        "icon-partner-benefit",
+        "icon-partner-benefits",
+        "icon-pay-calendar",
+        "icon-pay-over-time",
+        "icon-pay-yourself",
+        "icon-payback",
+        "icon-pencil",
+        "icon-percent",
+        "icon-percent-0",
+        "icon-percent-1",
+        "icon-percent-1-5",
+        "icon-percent-2",
+        "icon-percent-2-5",
+        "icon-percent-25",
+        "icon-percent-3",
+        "icon-percent-3-5",
+        "icon-percent-4",
+        "icon-percent-4-5",
+        "icon-percent-5",
+        "icon-percent-50",
+        "icon-personal",
+        "icon-pinterest",
+        "icon-plus-sq",
+        "icon-point-transfer",
+        "icon-point-transfer-alt",
+        "icon-pqp",
+        "icon-print",
+        "icon-protection",
+        "icon-purchase-benefits",
+        "icon-quote",
+        "icon-raf",
+        "icon-redeeming-points",
+        "icon-refer",
+        "icon-rewards",
+        "icon-rewards-1x",
+        "icon-rewards-2x",
+        "icon-rewards-5x",
+        "icon-ritz-10",
+        "icon-savings",
+        "icon-security",
+        "icon-shield",
+        "icon-shopping-bag",
+        "icon-shopping-bag-alt",
+        "icon-slant-roof-building",
+        "icon-slate-edge",
+        "icon-star",
+        "icon-star-wars",
+        "icon-starbucks-250",
+        "icon-starbucks-300",
+        "icon-starbucks-apron",
+        "icon-starbucks-cup",
+        "icon-starbucks-gold-card",
+        "icon-starbucks-star",
+        "icon-student-credit-cards",
+        "icon-tickets",
+        "icon-tilt-card",
+        "icon-travel",
+        "icon-travel-benefits",
+        "icon-travel-benefits-alt",
+        "icon-travel-exclusive",
+        "icon-travel-stars",
+        "icon-traveldining",
+        "icon-tsa-checkmark",
+        "icon-twitter",
+        "icon-twitter-old",
+        "icon-united-club-new",
+        "icon-visa",
+        "icon-wallet",
+        "icon-wholesale",
+        "icon-wifi",
+        "icon-youtube",
+      ];
+
+      const grid = document.getElementById("grid");
+      const searchInput = document.getElementById("search");
+
+      function render() {
+        const q = (searchInput.value || "").trim().toLowerCase();
+        grid.innerHTML = ICONS.map((cls) => {
+          const match = !q || cls.indexOf(q) !== -1;
+          return (
+            '<div class="icon-cell' +
+            (match ? "" : " hidden") +
+            '" data-name="' +
+            cls +
+            '">' +
+            '<span class="glyph ' +
+            cls +
+            '" aria-hidden="true"></span>' +
+            '<span class="name">' +
+            cls +
+            "</span>" +
+            "</div>"
+          );
+        }).join("");
+      }
+
+      searchInput.addEventListener("input", render);
+      render();
+    </script>
+  </body>
+</html>
